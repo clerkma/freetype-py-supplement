@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "freetype_supp"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Clerk Ma", email="clerkma@gmail.com" },
 ]
@@ -12,11 +12,14 @@ description = "Missing functions of freetype-py"
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
 ]
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
+dependencies = [
+  "freetype-py>=2.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/clerkma/freetype-py-supplement"
