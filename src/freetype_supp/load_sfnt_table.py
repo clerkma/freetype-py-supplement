@@ -3,7 +3,7 @@ from freetype.raw import FT_Load_Sfnt_Table
 import ctypes
 from struct import unpack_from
 
-def load_sfnt_table(face: freetype.Face, tag):
+def load_sfnt_table(face: freetype.Face, tag: str):
     try:
         face_ref = face._FT_Face
         tag_u32 = ctypes.c_uint32(unpack_from(">L", tag.encode("U8"), 0)[0])
