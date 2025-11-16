@@ -8,3 +8,4 @@ Functions:
 
 Utils:
 * `open_face(path: pathlib.Path, index: int)`
+* `get_image(face: Face)`

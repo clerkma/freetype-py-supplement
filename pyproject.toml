@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "freetype_supp"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="Clerk Ma", email="clerkma@gmail.com" },
 ]
@@ -19,6 +19,8 @@ license = "MIT"
 license-files = ["LICEN[CS]E*"]
 dependencies = [
   "freetype-py>=2.0",
+  "numpy",
+  "pillow",
 ]
 
 [project.urls]
