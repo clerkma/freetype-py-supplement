@@ -33,7 +33,8 @@ def get_image(face):
     elif m == ft_pixel_mode.GRAY:
         return Image.frombytes("L", (w, r), b)
     elif m == ft_pixel_mode.LCD or m == ft_pixel_mode.LCD_V:
-        return Image.frombytes("RGB", (w, r), b)
+        image_rgb = np.frombuffer(b, dtype=np.uint8).reshape((-1, p))[:, 0:w].reshape((-1, w // 3, 3))
+        return Image.fromarray(image_rgb, "RGB")
     elif m == ft_pixel_mode.BGRA:
         image_bgra = np.frombuffer(b, dtype=np.uint8).reshape((-1, 4))
         image_rgba = image_bgra[..., (2, 1, 0, 3)].reshape((-1, w, 4))
