@@ -8,4 +8,5 @@ Functions:
 
 Utils:
 * `open_face(path: pathlib.Path, index: int)`
-* `get_image(face: Face)`
+* `get_image(face: Face, transform=lambda x: x)`
+* `draw_text_simplex(face: Face, text: str, mode: render_mode, margin: tuple)`

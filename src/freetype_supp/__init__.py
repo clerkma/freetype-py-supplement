@@ -11,8 +11,9 @@ __all__ = [
     "load_sfnt_table",
     "open_face",
     "get_image",
+    "draw_text_simplex",
 ]
 from .enum import *
 from .get_truetype_engine_type import get_truetype_engine_type
 from .load_sfnt_table import load_sfnt_table
-from .open_face import open_face, get_image
+from .open_face import open_face, get_image, draw_text_simplex
